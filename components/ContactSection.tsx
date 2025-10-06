@@ -29,7 +29,7 @@ export function ContactSection() {
       icon: <Calendar className="w-5 h-5" />,
       label: "Schedule",
       value: "Book a Meeting",
-      href: "#"
+      href: "https://calendly.com/krish-ms2023/30min"
     }
   ];
 
@@ -201,7 +201,7 @@ export function ContactSection() {
                       Location
                     </h4>
                     <p className="text-gray-400 dark:text-gray-400 text-slate-500 text-sm">
-                      Baltimore, MD • Open to Remote Work
+                      United States • Open to Remote Work
                     </p>
                   </div>
                 </div>
