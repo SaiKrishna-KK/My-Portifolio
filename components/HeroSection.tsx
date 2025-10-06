@@ -149,11 +149,14 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 mb-8"
             >
               <Button 
+                asChild
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-purple-600 dark:to-blue-600 hover:from-purple-700 hover:to-blue-700 dark:hover:from-purple-700 dark:hover:to-blue-700 hover:from-blue-600 hover:to-indigo-600 text-white border-0 shadow-lg shadow-blue-200"
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </a>
               </Button>
               <Button 
                 variant="outline" 

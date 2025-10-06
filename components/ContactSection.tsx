@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, MapPin, Send, Github, Linkedin, Calendar } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin, Calendar, Download } from "lucide-react";
 import { useState } from "react";
 
 export function ContactSection() {
@@ -75,6 +75,12 @@ ${formData.email}`;
       label: "Schedule",
       value: "Book a Meeting",
       href: "https://calendly.com/krish-ms2023/30min"
+    },
+    {
+      icon: <Download className="w-5 h-5" />,
+      label: "Resume",
+      value: "Download CV",
+      href: "/resume.pdf"
     }
   ];
 
