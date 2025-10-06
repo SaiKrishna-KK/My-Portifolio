@@ -136,9 +136,9 @@ export function HeroSection() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg text-slate-700 dark:text-gray-300 max-w-lg leading-relaxed mb-8"
             >
-              <span className="text-blue-600 dark:text-cyan-300 font-medium">Software Engineer</span> specializing in{" "}
+              <span className="text-blue-600 dark:text-cyan-300 font-medium">Software Engineer & AI/ML Specialist</span> specializing in{" "}
               <AnimatedText />.
-              Building scalable, intelligent solutions that drive innovation across industries.
+              Building scalable, intelligent solutions that drive innovation across industries. Available for remote work opportunities.
             </motion.p>
 
             {/* CTA Buttons */}
