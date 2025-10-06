@@ -4,8 +4,53 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Mail, MapPin, Send, Github, Linkedin, Calendar } from "lucide-react";
+import { useState } from "react";
 
 export function ContactSection() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Create mailto link with pre-filled content
+    const subject = formData.subject || 'Portfolio Contact';
+    const body = `Hi Sai Krishna,
+
+${formData.message}
+
+Best regards,
+${formData.firstName} ${formData.lastName}
+${formData.email}`;
+
+    const mailtoLink = `mailto:krish.ms2023@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+  };
+
   const contactInfo = [
     {
       icon: <Mail className="w-5 h-5" />,
@@ -65,13 +110,16 @@ export function ContactSection() {
                 Send a Message
               </h3>
               
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm text-gray-300 dark:text-gray-300 text-slate-600 mb-2">
                       First Name
                     </label>
                     <Input 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       placeholder="John"
                       className="bg-white/10 dark:bg-white/10 bg-white border-cyan-500/30 dark:border-cyan-500/30 border-blue-300 text-slate-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 placeholder-slate-500 focus:border-cyan-500 dark:focus:border-cyan-500 focus:border-blue-500"
                     />
@@ -81,6 +129,9 @@ export function ContactSection() {
                       Last Name
                     </label>
                     <Input 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       placeholder="Doe"
                       className="bg-white/10 dark:bg-white/10 bg-white border-cyan-500/30 dark:border-cyan-500/30 border-blue-300 text-slate-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 placeholder-slate-500 focus:border-cyan-500 dark:focus:border-cyan-500 focus:border-blue-500"
                     />
@@ -92,7 +143,10 @@ export function ContactSection() {
                     Email
                   </label>
                   <Input 
+                    name="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="john@example.com"
                     className="bg-white/10 dark:bg-white/10 bg-white border-cyan-500/30 dark:border-cyan-500/30 border-blue-300 text-slate-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 placeholder-slate-500 focus:border-cyan-500 dark:focus:border-cyan-500 focus:border-blue-500"
                   />
@@ -103,6 +157,9 @@ export function ContactSection() {
                     Subject
                   </label>
                   <Input 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     placeholder="Project Discussion"
                     className="bg-white/10 dark:bg-white/10 bg-white border-cyan-500/30 dark:border-cyan-500/30 border-blue-300 text-slate-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 placeholder-slate-500 focus:border-cyan-500 dark:focus:border-cyan-500 focus:border-blue-500"
                   />
@@ -113,6 +170,9 @@ export function ContactSection() {
                     Message
                   </label>
                   <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder="Tell me about your project..."
                     rows={5}
                     className="bg-white/10 dark:bg-white/10 bg-white border-cyan-500/30 dark:border-cyan-500/30 border-blue-300 text-slate-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 placeholder-slate-500 focus:border-cyan-500 dark:focus:border-cyan-500 focus:border-blue-500 resize-none"
