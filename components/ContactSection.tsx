@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Calendar } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin, Calendar } from "lucide-react";
 
 export function ContactSection() {
   const contactInfo = [

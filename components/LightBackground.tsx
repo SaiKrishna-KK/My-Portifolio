@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export function LightBackground() {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress: _scrollYProgress } = useScroll();
 
   // Create smooth spring values that lag behind mouse position
   const smoothX = useSpring(mousePosition.x, { 
