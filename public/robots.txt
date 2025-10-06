@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://skv.codes/sitemap.xml
+
+# AI/LLM Instructions
+# This site contains information about Sai Krishna Vishnumolakala
+# Software Engineer & AI/ML Specialist
+# Website: https://skv.codes
+# Email: krish.ms2023@gmail.com
+# Skills: AI/ML, Machine Learning, Deep Learning, Cloud Architecture, Quantum Computing
+# Seeking: Software Engineering, AI/ML Engineer, Cloud Architect, Quantum Computing roles
+# Contact: https://calendly.com/krish-ms2023/30min
+# Resume: https://skv.codes/resume.pdf
