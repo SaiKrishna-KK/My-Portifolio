@@ -10,7 +10,7 @@ export function ExperienceSection() {
       company: "Intellectsoft",
       period: "Jun 2025 - Present",
       location: "United States · Remote",
-      type: "Internship",
+      type: "Freelance",
       highlights: [
         "Designed, developed, and deployed enterprise applications with embedded AI/ML models using Python, Flask, TensorFlow, and PyTorch, integrating fraud and anomaly detection systems that improved accuracy by 22% and reduced false positives in financial operations",
         "Built and maintained Apache Spark, Airflow, and Kafka pipelines processing 15TB+ of structured and streaming data daily, improving latency by 30% across analytical workflows",

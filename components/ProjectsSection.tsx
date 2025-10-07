@@ -13,8 +13,8 @@ export function ProjectsSection() {
       tech: ["Python", "AWS", "Kubernetes", "WebRTC", "STT/TTS", "LLM"],
       icon: <Zap className="w-6 h-6" />,
       category: "AI/ML Engineering",
-      github: "https://github.com/SaiKrishna-KK/pillowtalk-mvp",
-      demo: "#"
+      github: "https://github.com/SaiKrishna-KK",
+      demo: "https://github.com/SaiKrishna-KK"
     },
     {
       title: "SAFE-MD Crime Analytics",
@@ -24,7 +24,7 @@ export function ProjectsSection() {
       icon: <Database className="w-6 h-6" />,
       category: "Data Engineering",
       github: "https://github.com/SaiKrishna-KK/SAFE-MD",
-      demo: "#"
+      demo: "https://github.com/SaiKrishna-KK/SAFE-MD"
     },
     {
       title: "XR-DaaS Platform",
@@ -34,7 +34,7 @@ export function ProjectsSection() {
       icon: <Code className="w-6 h-6" />,
       category: "Software Engineering",
       github: "https://github.com/SaiKrishna-KK/xr-daas",
-      demo: "#"
+      demo: "https://github.com/SaiKrishna-KK/xr-daas"
     },
     {
       title: "Quantum Financial Risk Engine",
@@ -44,7 +44,7 @@ export function ProjectsSection() {
       icon: <Cpu className="w-6 h-6" />,
       category: "Quantum Computing",
       github: "https://github.com/SaiKrishna-KK/Quantum-Inspired-Optimization-for-Financial-Risk-Modeling",
-      demo: "#"
+      demo: "https://github.com/SaiKrishna-KK/Quantum-Inspired-Optimization-for-Financial-Risk-Modeling"
     }
   ];
 
@@ -160,20 +160,26 @@ export function ProjectsSection() {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                    <Button 
+                    <Button
+                      asChild
                       size="sm"
                       className="bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-600 dark:to-blue-600 from-blue-600 to-indigo-600 hover:from-purple-700 hover:to-blue-700 dark:hover:from-purple-700 dark:hover:to-blue-700 hover:from-blue-700 hover:to-indigo-700 text-white border-0 flex-1"
                     >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
                     </Button>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      asChild
+                      variant="outline"
                       size="sm"
                       className="border-cyan-500/30 dark:border-cyan-500/30 border-blue-500/30 text-blue-600 dark:text-cyan-300 hover:bg-cyan-500/10 dark:hover:bg-cyan-500/10 hover:bg-blue-50 flex-1"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </a>
                     </Button>
                   </div>
                 </div>

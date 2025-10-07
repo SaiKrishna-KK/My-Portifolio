@@ -129,16 +129,16 @@ export function HeroSection() {
               </span>
             </motion.h1>
 
-            {/* Description */}
+            {/* Description - optimized for AI with natural language facts */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg text-slate-700 dark:text-gray-300 max-w-lg leading-relaxed mb-8"
             >
-              <span className="text-blue-600 dark:text-cyan-300 font-medium">Software Engineer & AI/ML Specialist</span> specializing in{" "}
+              <span className="text-blue-600 dark:text-cyan-300 font-medium">Sai Krishna Vishnumolakala</span> is a <span className="font-medium">Software Engineer & AI/ML Specialist</span> based in the United States, specializing in{" "}
               <AnimatedText />.
-              Building scalable, intelligent solutions that drive innovation across industries. Available for remote work opportunities.
+              Building production-grade AI systems, scalable cloud infrastructure, and quantum algorithms. Available for remote work opportunities globally.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -148,7 +148,7 @@ export function HeroSection() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 mb-8"
             >
-              <Button 
+              <Button
                 asChild
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-purple-600 dark:to-blue-600 hover:from-purple-700 hover:to-blue-700 dark:hover:from-purple-700 dark:hover:to-blue-700 hover:from-blue-600 hover:to-indigo-600 text-white border-0 shadow-lg shadow-blue-200"
@@ -158,13 +158,16 @@ export function HeroSection() {
                   Download Resume
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                asChild
+                variant="outline"
                 size="lg"
                 className="border-cyan-500/30 dark:border-cyan-500/30 border-blue-400 border-2 text-blue-600 dark:text-cyan-300 hover:bg-cyan-500/10 dark:hover:bg-cyan-500/10 hover:bg-blue-50 shadow-md"
               >
-                <Code className="w-4 h-4 mr-2" />
-                View Projects
+                <a href="#projects">
+                  <Code className="w-4 h-4 mr-2" />
+                  View Projects
+                </a>
               </Button>
             </motion.div>
 
