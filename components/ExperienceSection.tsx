@@ -142,6 +142,20 @@ export function ExperienceSection() {
                             {experience.title}
                           </h3>
                           <div className="flex items-center gap-2 text-blue-600 dark:text-cyan-300 mt-1">
+                            <svg width="16" height="16" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                              <defs>
+                                <linearGradient id="skv-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                  <stop offset="0%" style={{stopColor:"#00d4ff",stopOpacity:1}} />
+                                  <stop offset="50%" style={{stopColor:"#0099ff",stopOpacity:1}} />
+                                  <stop offset="100%" style={{stopColor:"#dd00ff",stopOpacity:1}} />
+                                </linearGradient>
+                              </defs>
+                              <g fill="none" stroke="url(#skv-gradient)" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M 160 240 L 160 260 L 220 260 L 220 200 L 160 200 L 160 140 L 220 140" />
+                                <path d="M 270 140 L 270 260 M 270 200 L 340 140 M 270 200 L 340 260" />
+                                <path d="M 390 140 L 470 260 M 550 140 L 470 260" />
+                              </g>
+                            </svg>
                             <span>{experience.company}</span>
                             <ExternalLink className="w-4 h-4" />
                           </div>
